@@ -21,3 +21,6 @@ async function main() {
           console.error(error);
           process.exit(1);
   })
+
+  // const contractAddress = "0x349918e87e1E7014d8d3b6bB6352948cdF981934";
+  // const tokenAddress = "0x693C7e8B22467404D6Ee36Fe140A0513F886A215";
