@@ -93,7 +93,7 @@ export default function LAunch() {
       {hasError ? (
         <>
          <Box sx={{alignItems:'center',color:'red',ml:'450px',mt:'50px'}}>
-          "Error: connect your address to ethereum goerli test network"
+          {"Error: connect your address to ethereum goerli test network"}
           </Box>
           <Box sx={{alignItems:'center',ml:'45%',mt:'50px'}}> 
           <Button type="submit" onClick={connect}> connect wallet </Button>
