@@ -5,7 +5,7 @@ import {ethers} from 'ethers'
 
 
 
-export default function token(){
+export default function Token(){
     const[tokenTransfer,setTokenTransfer] = useState({
       address:"",
       amount:"",
