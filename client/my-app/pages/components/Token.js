@@ -1,6 +1,7 @@
 import { useState } from "react"
 import TokenAbi from "./tokenabi";
 import {ethers} from 'ethers'
+import Tokenabi from "./tokenabi";
 
 
 
@@ -12,7 +13,7 @@ export default function Token(){
     }); 
     const[signer,setSigner] = useState();
     const tokenAddress = " 0x9c249E65876E50ae2061495fACa93B2974A3639A";
-    const tabi = TokenAbi;
+    const tabi = Tokenabi;
     const contract = new ethers.Contract(tokenAddress,tabi,signer);
 
 

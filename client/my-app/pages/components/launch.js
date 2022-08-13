@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
+import Cfundabi from './abi';
 
 export default function LAunch() {
   const [hasError, setError] = useState(false);
@@ -35,7 +36,7 @@ export default function LAunch() {
 
     // const contractAddress = "0x98733057c72553b920e7965dcd3032277a2513ba";
     const contractAddress = "0x349918e87e1E7014d8d3b6bB6352948cdF981934";
-    const abi = cfundabi;
+    const abi = Cfundabi;
     const contract = new ethers.Contract(contractAddress, abi, signer);
     try {
       const tgoal = launch1.targetGoal;

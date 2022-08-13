@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
+import Cfundabi from './abi';
 
 
 export default function REfund() {
@@ -19,7 +20,7 @@ export default function REfund() {
     e.preventDefault();
     try {
       const contractAddress = "0x349918e87e1E7014d8d3b6bB6352948cdF981934";
-      const abi = cfundabi;
+      const abi = Cfundabi;
       const contract = new ethers.Contract(contractAddress, abi, signer);
 
 
