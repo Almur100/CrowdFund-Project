@@ -1,4 +1,4 @@
-const TokenAbi= [
+export default function TokenAbi() {[
     {
       "inputs": [
         {
@@ -286,4 +286,4 @@ const TokenAbi= [
       "type": "function"
     }
   ]
-  export default TokenAbi;
+}
