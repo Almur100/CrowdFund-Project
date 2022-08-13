@@ -1,4 +1,4 @@
-export default function TokenAbi() {[
+const Tokenabi= [
     {
       "inputs": [
         {
@@ -286,4 +286,4 @@ export default function TokenAbi() {[
       "type": "function"
     }
   ]
-}
+  export default  Tokenabi;
