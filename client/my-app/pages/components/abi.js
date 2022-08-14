@@ -1,4 +1,4 @@
-export default Cfundabi = [
+ const Cfundabi = [
     {
       "inputs": [
         {
