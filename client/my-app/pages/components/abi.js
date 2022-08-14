@@ -359,5 +359,5 @@ const Cfundabi = [
       "stateMutability": "nonpayable",
       "type": "function"
     }
-  ],
+  ]
   export default Cfundabi;
