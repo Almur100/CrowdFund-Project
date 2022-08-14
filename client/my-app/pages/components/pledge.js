@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
-// import Cfundabi from './abi';
+import Cfundabi from './abi';
 
 
 export default function PLedge() {
