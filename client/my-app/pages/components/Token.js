@@ -12,9 +12,7 @@ export default function Token(){
       amount:"",
     }); 
     const[signer,setSigner] = useState();
-    const tokenAddress = " 0x9c249E65876E50ae2061495fACa93B2974A3639A";
-    const tabi = Tokenabi;
-    const contract = new ethers.Contract(tokenAddress,tabi,signer);
+    
 
 
 
@@ -56,6 +54,9 @@ export default function Token(){
     }
     async function Transfert(e){
       e.preventDefault();
+      const tokenAddress = " 0x9c249E65876E50ae2061495fACa93B2974A3639A";
+      const tabi = Tokenabi;
+      const contract = new ethers.Contract(tokenAddress,tabi,signer);
       
   
       const camPledge = await contract.transfer(tokenTransfer.address,tokenTransfer.amount).then((r)=>{
