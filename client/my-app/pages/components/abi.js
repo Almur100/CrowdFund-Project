@@ -1,4 +1,4 @@
-const Cfundabi = [
+export default Cfundabi = [
     {
       "inputs": [
         {
@@ -360,4 +360,4 @@ const Cfundabi = [
       "type": "function"
     }
   ]
-  export default Cfundabi;
+  
