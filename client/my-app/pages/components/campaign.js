@@ -80,7 +80,7 @@ export default function Campaign(){
         <>
         <Grid container spacing={1}>
         {totalcamgn.map((item, idx) => (
-            <Grid item sm={12} xs={12} md={12} lg={12}>
+            <Grid key={item.id} item sm={12} xs={12} md={12} lg={12}>
                 <Card sx={{ maxWidth: "345",backgroundColor:'green' }}>
                     <CardContent>
                         <Stack direction='row' spacing={5} divider={<Divider orientation="vertical" flexItem />}>
