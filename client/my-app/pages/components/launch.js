@@ -2,10 +2,11 @@ import { useState } from 'react'
 import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
-import abi from './CrowdFund.json';
+import cfabi from './CrowdFund.json';
 
 export default function LAunch() {
   const [hasError, setError] = useState(false);
+  const[signer,setSigner] = useState();
   const [launch1, setLaunch1] = useState({
     targetGoal: "",
     startTime: "",
@@ -35,8 +36,8 @@ export default function LAunch() {
     e.preventDefault();
 
     // const contractAddress = "0x98733057c72553b920e7965dcd3032277a2513ba";
-    const contractAddress = "0x349918e87e1E7014d8d3b6bB6352948cdF981934";
-    const cabi = abi;
+    const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+    const cabi = cfabi.abi;
     const contract = new ethers.Contract(contractAddress, cabi, signer);
     try {
       const tgoal = launch1.targetGoal;
@@ -141,7 +142,7 @@ export default function LAunch() {
 
                     <Box sx={{ marginTop: '20px', marginLeft: '130px' }}>
 
-                      <Button type="submit" variant='contained' color='primary'>buyasset</Button>
+                      <Button type="submit" variant='contained' color='primary'>Launch</Button>
                     </Box>
 
 

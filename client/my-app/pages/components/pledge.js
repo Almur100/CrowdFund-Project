@@ -2,11 +2,13 @@ import { useState } from 'react'
 import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
-import abi from './CrowdFund.json';
+import cfabi from './CrowdFund.json';
+import tkabi from './token.json';
 
 
 export default function PLedge() {
   const [hasError, setError] = useState(false);
+  const[signer,setSigner] = useState();
   const [pledge1, setPledge1] = useState({
     pid: "",
     pAmount: "",
@@ -48,18 +50,22 @@ export default function PLedge() {
   async function Pledge(e) {
     e.preventDefault();
     try {
-      const contractAddress = "0x349918e87e1E7014d8d3b6bB6352948cdF981934";
-      const cabi = abi;
+      const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+      const cabi = cfabi.abi;
       const contract = new ethers.Contract(contractAddress, cabi, signer);
-      const tokencontract = new ethers.Contract(tokenAddress, tabi, signer);
-      await tokencontract.approve(contractAddress, pledge1.pAmount);
+      const tokenAddr = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+      const tabi =tkabi.abi;
+      const tokencontract = new ethers.Contract(tokenAddr, tabi, signer);
+      const amount = pledge1.pAmount;
+      const p = ethers.utils.parseUnits(amount, "18");
+      await tokencontract.approve(contractAddress, p);
 
 
-      const camPledge = await contract.pledge(pledge1.pid, pledge1.pAmount).then((r) => {
+      const camPledge = await contract.pledge(pledge1.pid, p).then((r) => {
         console.log(r);
       });
       contract.on("Pledge", (id, signer, amount) => {
-        console.log(id, signer, amount);
+        console.log(id.toNumber(), signer, amount);
 
       });
     } catch (e) {

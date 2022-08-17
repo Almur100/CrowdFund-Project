@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
-import abi from './CrowdFund.json';
+import cfabi from './CrowdFund.json';
 
 
 export default function REfund() {
   const [refundId, setRefundId] = useState("");
   const [hasError, setError] = useState(false);
+  const[signer,setSigner] = useState();
   function RefundEvent(e) {
     e.persist();
     console.log(e.target.value);
@@ -19,8 +20,8 @@ export default function REfund() {
   async function refund(e) {
     e.preventDefault();
     try {
-      const contractAddress = "0x349918e87e1E7014d8d3b6bB6352948cdF981934";
-      const cabi = abi;
+      const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+      const cabi = cfabi.abi;
       const contract = new ethers.Contract(contractAddress, cabi, signer);
 
 

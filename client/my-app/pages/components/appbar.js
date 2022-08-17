@@ -103,7 +103,7 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                  <Link href="/components/allRealestate">RealEstates</Link>
+                  <Link href="/components/campaign">Campaign</Link>
                   
                   </Typography>
                 </MenuItem>
@@ -154,7 +154,7 @@ const ResponsiveAppBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link href="/components/allRealestate">RealEstates</Link>
+                <Link href="/components/campaign">Campaign</Link>
                
               </Button>
               <Button
@@ -208,23 +208,23 @@ const ResponsiveAppBar = () => {
 
               </MenuItem>
               <MenuItem>
-                <Link href="/components/pledge">mintnft</Link>
+                <Link href="/components/pledge">Pledge</Link>
 
               </MenuItem>
               <MenuItem>
-                <Link href="/components/unpledge">addfractionasset</Link>
+                <Link href="/components/unpledge">unPledge</Link>
 
               </MenuItem>
               <MenuItem>
-                <Link href="/components/claim">buyasset</Link>
+                <Link href="/components/claim">Claim</Link>
 
               </MenuItem>
               <MenuItem>
-                <Link href="/components/cancel">addbuyfractionasset</Link>
+                <Link href="/components/cancel">Cancel</Link>
 
               </MenuItem>
               <MenuItem>
-                <Link href="/components/refund">sellon</Link>
+                <Link href="/components/refund">Refund</Link>
 
               </MenuItem>
               {/* <MenuItem>

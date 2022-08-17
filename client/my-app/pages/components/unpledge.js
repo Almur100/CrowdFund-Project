@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { ethers } from 'ethers';
 import { TextField, Card, CardContent, Grid, Button, Box } from '@mui/material';
 import Container from '@mui/material/Container';
-import abi from './CrowdFund.json';
+import cfabi from './CrowdFund.json';
 
 
 
 export default function UNpledge() {
   const [hasError, setError] = useState(false);
+  const[signer,setSigner] = useState();
   const [unPledge1, setUnPledge1] = useState({
     uid: "",
     uValue: "",
@@ -34,8 +35,8 @@ export default function UNpledge() {
   async function unPledge(e) {
     e.preventDefault();
     try {
-      const contractAddress = "0x349918e87e1E7014d8d3b6bB6352948cdF981934";
-      const cabi = abi;
+      const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+      const cabi = cfabi.abi;
       const contract = new ethers.Contract(contractAddress, cabi, signer);
       const tokencontract = new ethers.Contract(tokenAddress, tabi, signer);
       await tokencontract.approve(contractAddress, pledge1.pAmount);
