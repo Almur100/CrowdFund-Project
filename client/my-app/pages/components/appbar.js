@@ -107,12 +107,7 @@ const ResponsiveAppBar = () => {
                   
                   </Typography>
                 </MenuItem>
-                <MenuItem  onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                  <Link href="/components/myasset">my assets</Link>
-                  
-                  </Typography>
-                </MenuItem>
+                
               
             </Menu>
           </Box>
@@ -135,7 +130,7 @@ const ResponsiveAppBar = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ ml:38,flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ ml:65,flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             
               <Button
                 
@@ -157,15 +152,7 @@ const ResponsiveAppBar = () => {
                 <Link href="/components/campaign">Campaign</Link>
                
               </Button>
-              <Button
-                
-                
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                <Link href="/components/myasset">my assets</Link>
-               
-              </Button>
+              
             
           </Box>
 

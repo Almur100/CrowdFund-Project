@@ -5,19 +5,24 @@ import styles from '../styles/Home.module.css'
 import {ethers} from 'ethers';
 // import cfundabi from './abi'
 import moment from 'moment'
+import { Typography } from '@mui/material';
 // import token from './Token';
 // import TokenAbi from './tokenabi';
-import ResponsiveAppBar from './components/appbar';
+// import ResponsiveAppBar from './components/appbar';
 
 
 export default function Home(){
   return(
-  <>
-  <ResponsiveAppBar/>
+    <>
+  
+    <Typography variant='h5' sx={{fontWeight: 'bold',ml:'100px',mt:'50px'}}>
+    World leading donation crowdfund platform
+    </Typography>
+    </>
   
  
    
-   </>
+   
    
 
    

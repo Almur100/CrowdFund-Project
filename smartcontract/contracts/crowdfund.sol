@@ -31,6 +31,7 @@ contract CrowdFund {
     event Refund(uint id, address indexed caller, uint amount);
 
     struct Campaign {
+        uint id;
         // Creator of campaign
         address creator;
         // Amount of tokens to raise
@@ -71,6 +72,7 @@ contract CrowdFund {
 
         count += 1;
         campaigns[count] = Campaign({
+            id:count,
             creator: msg.sender,
             goal: _goal,
             pledged: 0,

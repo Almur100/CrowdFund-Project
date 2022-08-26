@@ -50,10 +50,10 @@ export default function PLedge() {
   async function Pledge(e) {
     e.preventDefault();
     try {
-      const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+      const contractAddress = "0xb9239033275de5748a04658190d6dfb39859fad5";
       const cabi = cfabi.abi;
       const contract = new ethers.Contract(contractAddress, cabi, signer);
-      const tokenAddr = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+      const tokenAddr = "0x3f3e2a9cedbb30b1d3c7c29b2b7cf9dc3c1e68e2";
       const tabi =tkabi.abi;
       const tokencontract = new ethers.Contract(tokenAddr, tabi, signer);
       const amount = pledge1.pAmount;

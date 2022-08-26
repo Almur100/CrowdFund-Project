@@ -36,7 +36,7 @@ export default function LAunch() {
     e.preventDefault();
 
     // const contractAddress = "0x98733057c72553b920e7965dcd3032277a2513ba";
-    const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+    const contractAddress = "0xb9239033275de5748a04658190d6dfb39859fad5";
     const cabi = cfabi.abi;
     const contract = new ethers.Contract(contractAddress, cabi, signer);
     try {
